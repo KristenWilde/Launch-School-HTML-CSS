@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summary</title>
+  <link rel="stylesheet" href="summary.css">
+</head>
+<body>
+  <main>
+    <section>
+      <h1>Display: Inline, Block, and Inline-Block</h1>
+      <h2>Inline Elements</h2>
+      <p>An inline element occupies only the space of the content. It does not take width and height values.</p>
+      <h3>Example: anchor elements</h3>
+      <p>Anchor elements are normally inline. They only take up the width of their content, not the whole width of the page. One inline element follows another on the same line.</p>
+      <div class="example-nav">
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </div>
+      <h3>What happens if we set a margin property on an inline level element?</h3>
+      <p>Inline elements will take only left and right margin values. This example is written with "margin: 30", but only the left and right margins appear.</p>
+      <div class="example-nav">
+        <a class="margin-example" href="#">Home</a>
+        <a class="margin-example" href="#">Portfolio</a>
+        <a class="margin-example" href="#">Contact</a>
+      </div>
+      <h3>What about padding?</h3>
+      Inline elements accept padding values on all sides, but vertical padding will overlap with padding of other elements. In this example, the dashed div and the anchor elements all have 30px padding, but they overlap significantly (vertically, not horizontally).
+      <div class="example-nav">
+        <a class="padding-example" href="#">Home</a>
+        <a class="padding-example" href="#">Portfolio</a>
+        <a class="padding-example" href="#">Contact</a>
+      </div>
+      <h3>Floating Inline Elements</h3>
+      <p>Floating an inline element will change its display value to inline-block. As such, it will take margin, padding, height, and width. For this example, <span>overflow: hidden</span> was added to the parent div (the dotted box) as clearfix. Without this, the anchor elements are not rendered within the parent and other content flows around them.</p>
+      <div class="example-nav">
+        <a class="float-example padding-example margin-example" href="#">Home</a>
+        <a class="float-example padding-example margin-example" href="#">Portfolio</a>
+        <a class="float-example padding-example margin-example" href="#">Contact</a>
+      </div>
+
+      <h2>Block Elements</h2>
+      <p>Block level elements take up the entire width of a page and always start a new line. It accepts margin and padding values. If no width is set, it will expand to fill its parent container. If no height is set, it will expand to fit its content.</p>
+      <h3>Example: div elements</h3>
+      <div class="div-example">This is a div with no properties except color.</div>
+      <div class="div-example height-div">This div's properties: <span>height: 80px; padding: 20px; margin: 20px</span> Width is not set, so the element fills the available width.</div>
+      <div class="div-example width-div">This div's properties: <span>width: 100px;</span> Height is not set, so the div fits its content.</div>
+
+      <h3>Floating block elements.</h3>
+      <p>When floated, a block element becomes inline-block. Unless width is specified, the element will shrink to the size of the content.</p>
+
+      <h2>Inline-Block Elements</h2>
+      <p>Inline-block elements take all the box-sizing properties of block elements, but sit on one line. They appear similar to elements with the <span>float: left</span> property. A few differences:</p>
+      <ul>
+        <li>Surrounding content does not wrap around the elements; no clearfix required.</li>
+        <li>Inline-block elements do not respond to viewport size, but floated elements do.</li>
+        <li>Whitespace is added between the elements. It cannot be removed through css; the html tags must be written on the same line, or line breaks can be commented out. The following anchor elements have no margin, so this whitespace can be easily seen.</li>
+      </ul>
+      <div class="example-nav">
+        <a class="inline-block padding-example" href="#">Home</a>
+        <a class="inline-block padding-example" href="#">Portfolio</a>
+        <a class="inline-block padding-example" href="#">Contact</a>
+        <a class="inline-block padding-example" href="#">About</a>
+        <a class="inline-block padding-example" href="#">Schedule</a>
+        <a class="inline-block padding-example" href="#">Some element that wraps below the others</a>
+      </div>
+    </section>
+    <section>
+      <h1>Floats and Positioning Elements</h1>
+      <h2>Floats</h2>
+      <p>A floated element is taken out of the normal flow and then shifted left or right. The floated div's below also have 20px adding and 5px margin.</p>
+      <div class="float-left">
+        <h4>Div 1</h4>
+        <span>float: left</span>
+      </div>
+      <div class="float-right">
+        <h4>Div 2</h4>
+        <span>float: right</span>
+      </div>
+      <div id="no-float">
+        <strong>Div 3</strong>
+        A plain block div with no positioning, no float.
+      </div>
+      <div class="float-left">
+        <h4>Div 4</h4>
+        <span>float: left</span>
+      </div>
+      <div class="clear">
+        <h4>Div 5</h4>
+        <span>clear: both</span>
+      </div>
+      <h3>Clearing floats:</h3>
+      <p>Choose from the following clear-fixes to make sure other elements do not wrap around floated elements:</p>
+        <ol>
+          <li>
+            Place an element below the floated elements, with the property <span>clear: left/right/both</span>
+          </li>
+          <li>
+            Place the floated elements in a container, and add an <span>::after</span> pseudo-element to the container with a clear property. Any pseudo-element should also have a content property. 
+            <p class="code">
+                container::after {
+                <br>content: "";
+                <br>display: block;
+                <br>clear: both;
+                <br>}
+            </p> 
+          </li>
+          <li>
+            Add <span>overflow: hidden</span> to the parent container. Besides clearing floats, this causes the parent to expand to the size of the floated elements.
+          </li>
+        </ol>
+      
+      <h2>Positioning</h2>
+      For more precise positioning than floats can accomplish, we can use the position property. This property can accept the following values:
+      <ul>
+        <li>Static</li>
+        <li>Fixed</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+      </ul>
+      <h2>Static Positioning</h2>
+      <p>The element renders normally on the page. This is the default position.</p>
+      
+      <h2>Fixed Positioning</h2>
+      <p>A fixed-positioned element will stay in the same place even when the page is scrolled.
+      <span>top</span>,        <span>right</span>,
+      <span>bottom</span>, and <span>left</span>
+      are the properties used to position the element.
+      Fixed-positioned elements are taken out of the page flow and do not leave a gap in the page where they would've been.
+      <div class="fixed position-example">I'm positioned fixed.</div>
+      
+      <h2>Relative Positioning</h2>
+      <p>With this property, setting offset values will move an element away from its default position. <em class="relative position-example">This sentence has <span>position: relative; top: 5px;</span> and a background color.</em>An empty space will be preserved where the element would've normally been located on the page. </p>
+
+      <h2>Absolute Positioning</h2>
+      <p>Absolute-positioned elements are moved in relation to their closest <em>relatively positioned</em> parent element (verses fixed-positioned elements which are always positioned in relation to the viewport). If there is no relatively positioned parent, they are positioned within the body element.</p>
+      <p>This section on position and floats (denoted with a dashed top and bottom border) has <span>position: relative</span>. </p>
+      <div class="absolute position-example">
+        This div has <span>position: absolute; bottom: -25px;</span>
+      </div>
+      <p>An absolutely positioned element is taken out of the normal document flow; no space will be preserved for it.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Practice Problems</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="form_styles.css">
+</head>
+<body>
+  <h1>Practice Problems: Forms</h1>
+  <form class="styled-form" action="/route" method="post">
+    <fieldset>
+    <legend>Contact information</legend>
+      <ul>
+        <li>
+          <label for="first_name">First name:</label>
+          <input id="first_name" type="text" name="first_name">
+        </li>
+        <li>
+          <label for="last_name">Last name:</label>
+          <input id="last_name" type="text" name="last_name">
+        </li>
+        <li>
+          <label for="email">Email:</label>
+          <input id="email" type="email" name="email" autocorrect="off" autocomplete="off" autocapitalize="none">
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input id="phone" type="tel" name="phone_number">
+          <select name="phone_type">
+            <option value="home" selected>Home</option>
+            <option value="business">Business</option>
+            <option value="mobile">Mobile</option>
+          </select>
+        </li>
+        <li>
+          <input type="submit" value="Send">
+        </li>
+      </ul>
+    </fieldset>
+  </form>
+  <form class="styled-form horizontal" action="/route" method="post">
+    <fieldset>
+    <legend>Contact information</legend>
+      <dl>
+        <dt>
+          <label for="firstname">First name:</label>
+        </dt>
+        <dd>
+          <input id="firstname" type="text" name="first_name">
+        </dd>
+        <dt>
+          <label for="last_name">Last name:</label>
+        </dt>
+        <dd>
+          <input id="last_name" type="text" name="last_name">
+        </dd>
+        <dt>
+          <label for="email">Email:</label>
+        </dt>
+        <dd>
+          <input id="email" type="email" name="email" autocorrect="off" autocomplete="off" autocapitalize="none">
+        </dd>
+        <dt>
+          <label for="phone">Phone number:</label>
+        </dt>
+        <dd>
+          <input id="phone" type="tel" name="phone_number">
+        </dd>
+        <dt>
+          <label for="phone_type">Phone type</label>
+        </dt>
+        <dd>
+          <select id="phone_type" name="phone_type">
+            <option value="home" selected>Home</option>
+            <option value="business">Business</option>
+            <option value="mobile">Mobile</option>
+          </select>
+        </dd>
+        <dt>
+          <input type="submit" value="Send">
+        </dt>
+      </dl>
+    </fieldset>
+  </form>
+  <form action="/search" method="get">
+    <fieldset>
+      <legend>Filter Articles</legend>
+      <h3>Select one category:</h3>
+      <label>
+        <input type="radio" name="category" value="core">
+        Core
+      </label>
+      <label>
+        <input type="radio" name="category" value="plugins_libraries">
+        Plugins and Libraries
+      </label>
+      <label>
+        <input type="radio" name="category" value="conventions">
+        Conventions
+      </label>
+      <label>
+        <input type="radio" name="category" value="reviews">
+        Reviews
+      </label>
+      <label>
+        <input type="radio" name="category" value="opinion">
+        Opinion
+      </label>
+      <label>
+        <input type="radio" name="category" value="people">
+        People
+      </label>
+      <h3>Select any number of tags:</h3>
+      <label>
+        <input type="checkbox" name="html">
+        HTML
+      </label>
+      <label>
+        <input type="checkbox" name="css">
+        CSS
+      </label>
+      <label>
+        <input type="checkbox" name="javascript">
+        Javascript
+      </label>
+      <label>
+        <input type="checkbox" name="ruby">
+        Ruby
+      </label>
+      <label>
+        <input type="checkbox" name="rails">
+        Rails
+      </label>
+      <label>
+        <input type="checkbox" name="python">
+        Python
+      </label>
+      <label>
+        <input type="checkbox" name="django">
+        Django
+      </label>
+
+      <input type="submit">
+    </fieldset>
+  </form>
+
+  <form action="" method="get">
+    <fieldset>
+    <legend>Search articles by category and tags</legend>
+      <dl>
+        <dt>
+          <label for="category">Category</label>
+        </dt>
+        <dd>
+          <select name="category" id="category">
+            <option value="core">Core</option>
+            <option value="plugins">Plugins and Libraries</option>
+            <option value="conventions">Conventions</option>
+            <option value="reviews">Reviews</option>
+            <option value="opinion">Opinion</option>
+            <option value="people">People</option>
+          </select>
+        </dd>
+        <dt>
+          <label for="tags">Tags</label>
+        </dt>
+        <dd>
+          <select name="tags" multiple size="7" id="tags">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">Javascript</option>
+            <option value="ruby">Ruby</option>
+            <option value="rails">Rails</option>
+            <option value="python">Python</option>
+            <option value="djangl">Django</option>
+          </select>
+        </dd>
+      </dl>
+      
+      <input type="submit" value="Filter Articles">
+      <input type="reset">
+    </fieldset>
+  </form>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+
+}
+
+main {
+  border: 1px solid #000;
+  color: #000;  
+  font: normal 18px Helvetica, Arial, sans-serif;
+  width: 21rem;
+  padding: .6rem;
+  margin: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.right {
+  float: right;
+}
+
+div {
+  clear: both;
+  border-bottom: 1px solid #222;
+  padding: 2px 0;
+}
+
+h2, h3 {
+  display: inline;
+}
+
+h2 {
+  font-size: .85rem;
+}
+
+
+/*hr {
+  height: 1rem;
+  background-color: #000
+}*/
+
+div > div {
+  margin-left: 1rem;
+}
+
+div > div:first-of-type {
+  border-top: 1px solid #222;
+}
+
+div > div:last-of-type {
+  border-bottom:0;
+}
+
+section {
+  border-top: 1rem solid #000;
+  border-bottom: 1rem solid #000;
+  margin-top: 3px;
+}
+
+aside {
+  font-size: .9rem;
+  margin: .5rem 0;
+}
+
+h2.right {
+  padding: 2px 0;
+  border-top: .5rem solid #000;
+  border-bottom: 1px solid #222;
+  width: 100%;
+  text-align: right;
+}
+
+table {
+  font-size: .8rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+th {
+  border-bottom: 1px solid #222;
+  border-collapse: collapse;
+  font-weight: normal;
+  /*text-indent: none;*/
+  text-align: left;
+}
+
+td, th {
+  /*padding-left: .8rem;*/
+  width: 21%;
+}
+
+td:first-of-type {
+  /*padding-left: 0;*/
+  width: 37%;
+}
+
+.indent {
+  text-indent: 1rem;
+}
+

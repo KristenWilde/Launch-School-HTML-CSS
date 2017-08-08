@@ -1,0 +1,56 @@
+body {
+  background: url("bg_body.gif");
+  /*background-size: 500px;*/
+  background-position: 20px 0;
+  text-align: center;
+  font: 20px "futura medium", "avenir next", sans-serif;
+  color: #45494d;
+  padding: 0;
+}
+
+h1 img {
+  /*width: 240px;*/
+  padding: 130px 0 50px;
+}
+
+main {
+  background: white;
+  width: 80%;
+  margin: 0 auto;
+  min-width: 400px;
+  max-width: 960px;
+}
+
+article {
+  padding: 4em ;
+}
+
+h2 {
+  font-weight: 500;
+  padding: auto 2em;
+}
+
+h2::before,
+h2::after {
+  content: "•";
+  margin: auto 1em;
+}
+
+h3 {
+  color: #3e98b2;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #e7e7e7;
+  padding: 1.5em;
+}
+
+ul {
+  display: inline;
+  marker: none;
+}
+
+footer li {
+  padding: 0 3rem;
+}

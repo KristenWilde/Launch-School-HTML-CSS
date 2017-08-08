@@ -1,0 +1,79 @@
+body {
+  background: linear-gradient(to bottom, #d2dcbe, #fcfff4);
+  font: normal 18px/1.5 "roboto condensed", sans-serif;
+  color: #3e606f;
+}
+
+header {
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 20px 20px 0;
+  overflow: hidden;
+}
+
+header h1 {
+  background: transparent url("shutter_logo.png") 0 0 no-repeat;
+  font-size: 36px;
+  color: #193441;
+  padding: 35px 0 25px 115px;
+  float: left;
+}
+
+nav {
+  float: right;
+  padding-top: 75px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 10px 40px 14px;
+  border-radius: 10px 10px 0 0;
+  color: #91aa9d;
+  background-color: #fcfff5;
+  text-decoration: none;
+}
+
+nav a.active {
+  background-color: #91aa9d;
+  color: #fcfff5;
+}
+
+
+main {
+  padding: 30px;
+  max-width: 920px;
+  background-color: #fcfff5;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 5px 5px 2px #b5b5b5;
+}
+
+main h1 {
+  font-size: 32px;
+  padding: 40px 0 30px;
+}
+
+.featured-img {
+  width: 100%;
+}
+
+.article-img {
+  float: right;
+  padding-left: 40px;
+}
+
+main p {
+  padding-bottom: 30px;
+}
+
+footer {
+  height: 30px;
+  max-width: 880px;
+  margin: 0 auto;
+  font-size: 14px;
+  padding-top: 16px;
+}

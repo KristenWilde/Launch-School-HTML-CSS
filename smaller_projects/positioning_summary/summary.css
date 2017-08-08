@@ -1,0 +1,144 @@
+body {
+  background: #fff;
+  font: 16px/2 Helvetica, sans-serif;
+  color: #545459;
+}
+
+main {
+  max-width: 900px;
+  border: 2px solid gray;
+  padding: 20px;
+  padding-bottom: 400px;
+  /*box-sizing: border-box;*/
+}
+
+section:nth-of-type(2) {
+  border-top: 2px dashed gray;
+  border-bottom: 2px dashed gray;
+  position: relative;
+}
+
+h1, h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ce4a4a;
+  margin: 20px 0;
+}
+h1 {
+  text-align: center;
+}
+h3 {
+  font-size: 16px;
+  margin: 20px 0;
+}
+.example-nav {
+  border: 2px dashed gray;
+  margin: 40px;
+  padding: 30px;
+  width: 600px;
+  overflow: hidden;
+}
+
+.margin-example {
+  margin: 30px;
+}
+
+.padding-example {
+  padding: 30px;
+  background-color: green;
+  color: white;
+}
+
+.float-example {
+  float: left;
+}
+
+.div-example {
+  color: #fff;
+  background-color: blue;
+}
+
+.height-div {
+  background-color: green;
+  height: 80px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.width-div {
+  background-color: tomato;
+  width: 200px;
+}
+
+span {
+  background-color: rgba(200,200,200,.5);
+  border-radius: 4px;
+  padding: 2px 5px;
+  font: 15px monospace, serif;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.clear {
+  clear: both;
+  color: #fff;
+  background: mediumvioletred;
+  padding: 15px;
+}
+
+.float-left {
+  padding: 20px;
+  float: left;
+  background: sandybrown;
+  margin: 5px;
+}
+
+.float-right {
+  padding: 20px;
+  margin: 5px;
+  float: right;
+  background-color: rebeccapurple;
+}
+
+div {
+  color: #fff;
+  border: 1px solid lightgray;
+}
+
+#no-float {
+  /*width: 300px;*/
+  background-color: mediumslateblue;
+}
+
+.code {
+  font: 15px/1.2 monospace;
+  margin: 10px auto;
+  position: relative;
+  left: 100px;
+  text-indent: -15px;
+}
+
+.position-example {
+  background-color: rgba(20, 255, 255, .4);
+  padding: 5px 15px;
+  color: #545459;
+}
+
+.relative {
+  position: relative;
+  top: 50px;
+}
+
+.fixed {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+.absolute {
+  position: absolute;
+  bottom: -25px;
+  /*right: 200px;*/
+}
